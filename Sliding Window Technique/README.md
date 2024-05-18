@@ -7,5 +7,6 @@ Types of Sliding window
 1. Fixed size sliding window : window size is constant throughout the process
 2. Variable size sliding window : window size can change based on certain consditions or constraints
 
+## Fixed sized sliding window
 
 
