@@ -34,4 +34,5 @@ Initialize the left and right pointers.
 * Update the left pointer to left + 1.
 * Update the desired result (e.g., maximum sum) if the current window's property is better.
 
-
+**Observation_1** : If we have to work on a window of size k , then we generally try to work on 1st window then loop over rest.
+Example: permutationString , max sum of k distinct Subarray,k-beauty of a number.
