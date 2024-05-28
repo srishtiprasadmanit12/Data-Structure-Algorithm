@@ -24,3 +24,6 @@ move right pointer to left until we get leftmost value
 
 last occurence of target number 
 move left pointer to right until we get rightmost value
+
+I find this question a good one , where we find 1st & last occurence both in a single question my making function.
+https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/ 
