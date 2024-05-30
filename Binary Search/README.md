@@ -27,3 +27,11 @@ move left pointer to right until we get rightmost value
 
 I find this question a good one , where we find 1st & last occurence both in a single question my making function.
 https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/ 
+
+
+## std::lower_bound AND std::upper_bound
+
+**std::lower_bound** :  Finds the first position in the range where an element can be inserted without violating the order. It returns an iterator pointing to the first element that is not less than (i.e., greater than or equal to) the given value.
+
+**std::upper_bound** : Finds the last position in the range where an element can be inserted without violating the order. It returns an iterator pointing to the first element that is greater than the given value.
+

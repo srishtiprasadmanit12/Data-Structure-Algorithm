@@ -1,4 +1,4 @@
-//optimised binary Search code 
+//optimised binary Search code , brute force is same as 
 class Solution {
 public:
     bool isPossible(int k,vector<int>& piles, int h){
