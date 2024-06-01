@@ -31,4 +31,6 @@ These differences arise from the fundamental definitions of minimum and maximum 
 
 Preorder application 
 -  path sum
--  
+-  max height
+- min height
+- sum of left leaves
