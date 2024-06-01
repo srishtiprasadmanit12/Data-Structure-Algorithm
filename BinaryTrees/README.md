@@ -16,3 +16,7 @@ Binary trees are a special type of tree in which each node has at most two child
 **For finding max Depth**:Simply takes the maximum depth of both subtrees and adds one, as the presence of null children does not affect the longest path calculation.
 
 These differences arise from the fundamental definitions of minimum and maximum depth and how they relate to the structure of the tree.
+
+Preorder application 
+-  path sum
+-  
