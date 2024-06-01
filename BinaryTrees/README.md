@@ -1,6 +1,18 @@
 # Binary Trees
 Binary trees are a special type of tree in which each node has at most two children. Binary trees.
 
+All binary tree follow a similar kind of pattern. 
+
+- Finding one or more base cases , which is must for recursion.
+- Calling the same function on left 
+- Calling the same function on right
+- joining the result.
+
+The following image shows pictorial representation.
+
+![Binary Tree](binaryTree.png)
+
+
 
 **Observation 1**: it is very important to understand difference in calculating min and max depth of binary tree.
 
