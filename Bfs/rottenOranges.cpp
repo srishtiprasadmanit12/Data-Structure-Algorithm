@@ -36,7 +36,7 @@ public:
                     if(nx<0 || ny<0 ||nx>=n ||ny>=m || grid[nx][ny]!=1){
                         continue;
                     }
-                    grid[nx][ny]=2;
+                    grid[nx][ny]=2; // marking node as visited 
                     q.push({nx,ny});
                 }
 

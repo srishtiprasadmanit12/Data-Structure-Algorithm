@@ -26,7 +26,7 @@ public:
                     if((nx==0 || nx==n-1 || ny==0 || ny==m-1)&&(nx!=entrance[0] || ny!=entrance[1]))
                         return ans;
                     else{
-                        maze[nx][ny]='+';
+                        maze[nx][ny]='+';// marking node as visited 
                         q.push({nx,ny});
                     }
                 }
