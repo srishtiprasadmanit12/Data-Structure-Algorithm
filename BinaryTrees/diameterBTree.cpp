@@ -7,15 +7,16 @@ int ans =0;
         int lh = height(root->left);
         int rh = height(root->right);
 
-        ans = max(ans,lh+rh); // Calculate diameter separetly in 'ans' variable
+       // ans = max(ans,lh+rh); // Calculate diameter separetly in 'ans' variable
         return 1+max(lh,rh); // return height recursively
     }
     int diameterOfBinaryTree(TreeNode* root) {
         if(!root) return 0;
 
-        height(root);
+        int hl = height(root->left);
+        int hr = height(root->right);
 
-        return ans;
+        return hl+hr;
     }
 };
 
