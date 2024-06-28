@@ -28,7 +28,18 @@ Patterns of questions in dynamic programming
    Find all optimal solutions for every interval and return the best possible answer.
 
    For example:   Unique binary Search Trees 
-   
+
 4. DP on Strings
+
+   General problem statement for this pattern can vary but most of the time you are given two strings where lengths of those strings are not big.
+
+   **Statement**
+   Given two strings s1 and s2, return some result
+
+   **Approach**
+   Most of the problems on this pattern requires a solution that can be accepted in O(n^2) complexity.
+
+   List of problems : https://leetcode.com/list/55afh7m7
+
 5. Decision Making
 

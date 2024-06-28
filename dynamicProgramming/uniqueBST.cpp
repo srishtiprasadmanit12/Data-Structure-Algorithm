@@ -18,6 +18,7 @@ public:
 
 //MEMOISED APPROACH 
 //TC : O(N*N)
+
 class Solution {
 public:
     int dp[20]={0}; 
@@ -46,7 +47,7 @@ root        1           2           3
 root        1           2           3           4           5
 i-1 n-i   0  4         1  3       2   2       3  1         4  0
             3 1
-*/
+
                    
         1               2            2
           5            1 3         1    5
@@ -54,3 +55,4 @@ i-1 n-i   0  4         1  3       2   2       3  1         4  0
         3                 5           4
        2 
 
+*/

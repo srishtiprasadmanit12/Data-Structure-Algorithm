@@ -45,7 +45,7 @@ class Solution {
         }
     };
     /*
-     bloomDay = [1,10,3,10,2], m = 3, k = 1
+     bloomDay = [1,10,3,10,2], m = 3, k = 2
      bouquets-> no of boquets
      cnt -> no of flowers
     */
