@@ -1,0 +1,32 @@
+class Solution {
+public:
+    int findLength(vector<int>& nums1, vector<int>& nums2) {
+        int n= nums1.size();
+        int m= nums2.size();
+        int res = INT_MIN;
+        vector<vector<int>>dp(n+1,vector<int>(m+1,0));
+        for(int i=1;i<=n;i++){
+            for(int j=1;j<=m;j++){
+
+                 if(nums1[i-1]==nums2[j-1]){
+                    dp[i][j] = 1 + dp[i-1][j-1]; 
+                    res = max(res,dp[i][j]);                   
+                }
+                else{
+                    dp[i][j]=0; //if not equal then we'll reset the value to 0
+                }
+
+            }
+        }
+        return res;
+    }
+};
+/*   [      1   2   3   2   1 ]
+        0   1   2   3   4   5
+     0  0   0   0   0   0   0
+3    1  0   
+2    2  0  
+1    3  0      
+4    4  0  
+7    5  0   
+*/
