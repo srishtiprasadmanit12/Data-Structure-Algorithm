@@ -56,7 +56,7 @@ int lcs_tabulation(string str1,string str2,int n,int m){
     f   0     1   1   1
     c   0     1   1   2
 */
-
+vector<vector<int>>dp(n,vector<int>(m,0))
 int main(){
     string str1 , str2;
     cin>>str1>>str2;
