@@ -1,7 +1,7 @@
 class Solution {
 public:
     int maximumLengthSubstring(string s) {
-        int cnt[26] = {};  // Array to count occurrences of each character
+    int cnt[26] = {};  // Array to count occurrences of each character
     int res = 0;       // Result variable to store the maximum length
     int j = 0;         // Start pointer for the sliding window
 

@@ -22,3 +22,11 @@ void Btree::preOrder(TreeNode *root){
     preOrder(root->right);
 }
 
+int main(){
+    Btree Bt;
+    Bt.root = new TreeNode(1);
+    Btree.root->left = new TreeNode(2);
+    Btree.root->right = new TreeNode(3);
+    Btree.root->left->left = new TreeNode(4);
+    Btree.root->left->right = new TreeNode(5);
+}

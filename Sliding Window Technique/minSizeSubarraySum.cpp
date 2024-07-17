@@ -1,27 +1,21 @@
 class Solution {
 public:
     int minSubArrayLen(int target, vector<int>& nums) {
-          // Paso #1
-        int valorMinimo = 9999999;
-        int suma = 0;
-        int izquierda = 0;
-        int derecha = 0;
-
-        // Paso #2
-        for (derecha = 0; derecha < nums.size(); derecha++) {
-            suma += nums[derecha];
-
-            // Paso #3
-            while (suma >= target) {
-            // Paso #4
-                valorMinimo = min(valorMinimo, derecha - izquierda + 1);
-                suma -= nums[izquierda];
-                izquierda++;
-            }
+        vector<int>res;
+        int sum=0;
+        int left = 0;
+        int n =nums.size();
+        int minLen=INT_MAX;
+        int len=0;
+        for(int right=0;right<n;right++){ 
+            sum+=nums[right];
+            while(sum>=target){
+                len = right-left+1;
+                minLen=min(minLen,len);
+                sum-=nums[left];
+                left++;
+            }            
         }
-
-        // Paso #5
-        return valorMinimo == 9999999 ? 0 : valorMinimo;
-
+        return minLen==INT_MAX?0:minLen;
     }
 };
