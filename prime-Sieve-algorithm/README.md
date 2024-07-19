@@ -178,14 +178,14 @@ for(auto x:mp){
     cout<<x.first << "" << endl;
 }
 ````
-### 4. find divisors
+### 4. Find divisors
 
 ```
 const n= 1e5;
 vector<int>divisor[n];
 for(int i=2;i<n;i++>){
     for(int j = i;j<n;j+=i>){ // iterating on multiple of i 
-        
+
         divisor[j].push_back(i); // j is a multiple of i
 
     }
