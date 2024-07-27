@@ -95,7 +95,7 @@ int main(){
             }
     }
 }
-//if we have been given q queries 
+// If we have been given q queries 
 
 int q;
 cin>>q;
@@ -110,5 +110,84 @@ while(q--){
     }
 }
 
+}
+```
+
+## Variation of sieve algorithm 
+Example : highest prime, lowest prime, prime factorization, divisors
+### 1.  Highest prime, Lowest prime
+```
+int main(){
+    int n;cin>>n;
+    vector<bool>isPrime(n,true);
+    vector<int>hp(n,0);
+    vector<int>lp(n,0);
+    isPrime[0]=isPrime[1]=false;
+    for(int i=2;i<n;i++){
+        if(isPrime[i]==true){ // if i th number is prime means all the mulitples of it is not prime
+        lp[i]=hp[i]=i;
+            for(int j=2*i;j<n;j+=i){
+                isPrime[j]=false;
+                hp[j]=i;
+                if(lp[j]==0){
+                    lp[j]=i;
+                }
+            }
+        }
+    }
+
+}
+```
+
+### 2. stores all prime factors in a array 
+
+```
+int n;cin>>n; // find all prime factor of n 
+vector<int>primeFactor;
+
+while(n>1){
+
+    int pf = hp[n]; // later we'll divide by highest primefactor 
+    while(n%pf == 0){
+        n = n/pf;
+        primeFactor.push_back(pf);
+    }
+
+}
+
+for(int i=0;i<primeFactor.size();i++){
+    cout<<primeFactor[i]<<endl;
+}
+
+```
+### 3. stores all prime factors in a map (create frequency map of prime factor)
+
+
+````
+int n;cin>>n;
+map<int,int>mp;
+while(n>1){
+    int pf = hp[n]; // later we'll divide by highest primefactor
+    while(n%pf==0){
+        n=n/pf;
+        mp[pf]++; // increment the frequency of prime factor
+    }
+}
+
+for(auto x:mp){
+    cout<<x.first << "" << endl;
+}
+````
+### 4. Find divisors
+
+```
+const n= 1e5;
+vector<int>divisor[n];
+for(int i=2;i<n;i++>){
+    for(int j = i;j<n;j+=i>){ // iterating on multiple of i 
+
+        divisor[j].push_back(i); // j is a multiple of i
+
+    }
 }
 ```
