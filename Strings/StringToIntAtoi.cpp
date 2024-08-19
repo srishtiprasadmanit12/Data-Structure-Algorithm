@@ -1,3 +1,12 @@
+/*
+For this particular ques we could have used stoi() method but it has few limitations
+string str = "geek13";
+cout<< stoi(str);
+=======> error <=========
+The above code will throw an exception because stoi() function does not support strings that contain non-numeric
+characters. It will only work with strings that contain numeric characters. So we have to use a loop
+
+*/
 
 class Solution {
 public:
@@ -9,7 +18,7 @@ public:
         while(s[i]==' ')
             i++;
         
-        int sign = 0; // 0->+ , 1->-
+        int sign = 0; // 0-> + , 1->-
 
         //handle sign 
         if(s[i]=='-'){

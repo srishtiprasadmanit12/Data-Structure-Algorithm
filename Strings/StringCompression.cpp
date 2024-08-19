@@ -14,7 +14,7 @@ public:
 
             nums[ans]=letter;
             ans++;
-
+            //cnt might be two digit
             if(cnt>1){
                 for(auto& c:to_string(cnt)){
                     nums[ans]=c;
