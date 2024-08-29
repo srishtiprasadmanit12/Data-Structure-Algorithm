@@ -34,6 +34,7 @@ public:
                 }
             }
         }
+        //After applying Dfs at boundary the cells which is left that is not visited & value of cell=1 we need to count that and return as answer
         int cnt=0;
         for(int i=0;i<r;i++){
             for(int j=0;j<c;j++){
