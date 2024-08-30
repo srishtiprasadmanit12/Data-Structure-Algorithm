@@ -14,7 +14,7 @@ class Solution {
 public:
     void dfs(int i,int j,int r,int c,vector<vector<int>>&grid,vector<vector<int>>&vis){
 
-        if(i<0 ||j<0||i==r||j==c || vis[i][j]||!grid[i][j]){
+        if(i<0 ||j<0||i==r||j==c || vis[i][j]||grid[i][j]==0){
             return;
         }
         vis[i][j]=1;
