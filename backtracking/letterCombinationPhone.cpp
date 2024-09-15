@@ -29,3 +29,13 @@ public:
      return ans;
     }
 };
+
+/*
+
+                 ""
+               / | \
+             "a" "b" "c"
+            /|\   /|\   /|\
+         "ad" "ae" "af" "bd" "be" "bf" "cd" "ce" "cf"
+
+*/
