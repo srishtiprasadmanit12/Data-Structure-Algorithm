@@ -1,5 +1,4 @@
-/*             RECURSION
-
+//RECURSION
 class Solution {
 public:
     int climbingStairs(vector<int>& cost,int idx){
@@ -17,7 +16,7 @@ public:
         return min(climbingStairs(cost,n-1),climbingStairs(cost,n-2));
     }
 };
-*/
+
 
 //MEMOISATION
 class Solution {
