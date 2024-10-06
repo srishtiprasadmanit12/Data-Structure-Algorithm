@@ -33,3 +33,24 @@ int main(){
     Btree.root->left->left = new TreeNode(4);
     Btree.root->left->right = new TreeNode(5);
 }
+//======================
+
+class car {
+    constructur(brand,model){
+        this.vehicleType= 'car',
+        this.brand = brand,
+        this.model = model
+    }   
+    drive() {
+        return `Drivging a ${this.brand} ${this.model} car` 
+    }
+}
+
+class bus{
+    constructor() {
+
+    }
+
+}
+
+
