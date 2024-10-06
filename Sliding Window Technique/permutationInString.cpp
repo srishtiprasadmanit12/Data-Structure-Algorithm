@@ -1,3 +1,36 @@
+/*
+Brute force Approach
+
+Finding all permutation of S1, and then comparing it with s2 wheather
+any of the permutation is present or not.
+*/
+
+class Solution {
+public:
+    bool checkInclusion(string s1, string s2) {
+        sort(s1.begin(),s1.end());
+
+        //check permutation of s1 in while loop
+
+        while(true){
+
+            if(s2.find(s1)!=string::npos){
+                //if any one of the permutation is present , return true & no need to check other permutation
+                return true;
+            }
+
+            //generate next permutation
+            if(!next_permutation(s1.begin(),s1.end())){
+                //next permutation is not present then break out of loop,other wise it will 
+                //generate next permutation & store it in s1
+                break;
+            }
+        }
+        return false;
+    }
+};
+          <===========================|X|============================>
+
 class Solution {
 public:
     bool checkInclusion(string s1, string s2) {
