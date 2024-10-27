@@ -34,5 +34,14 @@ Initialize the left and right pointers.
 * Update the left pointer to left + 1.
 * Update the desired result (e.g., maximum sum) if the current window's property is better.
 
-**Observation_1** : If we have to work on a window of size k , then we generally try to work on 1st window then loop over rest.
+**Observation_1** : If we have to work on a fixed window of size (say) k , then we generally try to work on 1st window then loop over rest.
 Example: permutationString , max sum of k distinct Subarray,k-beauty of a number.
+
+**Observation_2** : If we have to find longest subarray/substring or either maximum or minimum of something contagiously , this indicates variable sized window.
+
+here approach is generally keeping poniter on starting and loop over array/string with second pointer if it exceeds the limit we keep on removing elements from starting and increase the start pointer (left one).
+
+Example: longest substring without repeating character , maximum sum of subarray of size k , minimum window substring,longest substring/subarray length.
+
+Sliding window problem always revolves around find max/min **length** 
+

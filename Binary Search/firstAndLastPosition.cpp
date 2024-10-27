@@ -11,8 +11,10 @@ public:
             }else{
                 idx=mid;
                 if(isSearchLeft){
+                    //once you get the target idx, search for leftmost target value
                     r=mid-1;
                 }else{
+                    //once you get the target idx, search for rightmost target value
                     l=mid+1;
                 }
             }
