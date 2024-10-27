@@ -11,6 +11,7 @@ public:
 
       long long sum=0,maxSum=0;
       // Calculate sum of first k elements & store numbers it in map,
+      // First window
       for(int i=0;i<k;i++){
         sum+=nums[i];
         mp[nums[i]]++; // maintaining frequency of elements
