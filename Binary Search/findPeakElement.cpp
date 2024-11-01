@@ -24,6 +24,8 @@ public:
     }
 };
 /**************************OPTIMISED O(logn)************************** */
+
+//Apply binary search on indices of array and not on their values 
 class Solution {
 public:
     int findPeakElement(vector<int>& nums) {
@@ -39,8 +41,11 @@ public:
         }
         int start=0;
         int end = n-2;
+        //Aim will be to check if our mid is peak element
+        //in this ques, we dont need to check boundary condition inside while loop, hence start<end and not start<=end
         while(start<end){
             int mid = start + (end - start)/2;
+            //crux:what value are we going to compare from nums[mid] 
             if(nums[mid]>nums[mid+1]){
                 end=mid;
             }

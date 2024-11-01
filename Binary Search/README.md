@@ -35,3 +35,6 @@ https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-
 
 **std::upper_bound** : Finds the last position in the range where an element can be inserted without violating the order. It returns an iterator pointing to the first element that is greater than the given value.
 
+**Observation : 1** Use while (start <= end) when you need to search for a specific element and ensure all possible elements (including boundaries) are checked.
+
+**Observation : 2** Use while (start < end) when you are shrinking the search space toward a single valid answer (like finding a boundary or position) and want to avoid redundant checks.
