@@ -206,3 +206,87 @@ int main()
 ### Reverse an integer
 
 [Reverse an integer Leetcode](https://leetcode.com/problems/reverse-integer/description/)
+
+`This is gem question --> includes concept of recursion,handling overflow,signed & unsigned`
+
+```
+class Solution {
+public:
+int sum=0;
+    bool recur(int n){
+        if(n==0)
+            return true;
+        int rem = n%10;
+        if ((sum > INT_MAX / 10) || (sum < INT_MIN / 10)) {
+            return false;  // Return false to indicate overflow
+        }
+        sum=sum*10+rem;
+       return recur(n/10);
+    }
+    int reverse(int x) {
+      int sign = (x<0)?-1:1;
+      bool ans = recur(abs(x));
+      return ans ? sign * sum : 0;
+    }
+};
+```
+
+### Check if palindrome or not using recursion
+steps:
+draw tree and find recurrence relation
+find base case
+find the variables in recursion
+
+```
+#include <bits/stdc++.h>
+
+using namespace std;
+bool palindrome(string s,int i,int j){
+    if(i>j){
+        return true;
+    }
+    if(s[i]!=s[j]){
+        return false;
+    }
+    return palindrome(s,i+1,j-1);
+    
+}
+
+int main()
+{
+    string str = "abcclba";
+    int n= str.size();
+    cout<<palindrome(str,0,n-1);
+    return 0;
+}
+```
+
+### Count number of zeros in given number
+```
+int countZeros(int num){
+    //base
+    if(num==0){
+        return 1;
+    }
+    //extract last digit
+    if(num<10){
+        return (num==0)?1:0;
+    }
+    
+    //recursive case
+    int rem=num%10;
+    int cnt=0;
+    if(rem==0)
+        cnt++;
+    
+    return cnt+countZeros(num/10);
+}
+
+int main()
+{
+    int num = 120404032;
+    cout<<countZeros(num);
+    return 0;
+}
+```
+
