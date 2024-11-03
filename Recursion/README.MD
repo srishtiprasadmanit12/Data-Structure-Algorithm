@@ -206,3 +206,177 @@ int main()
 ### Reverse an integer
 
 [Reverse an integer Leetcode](https://leetcode.com/problems/reverse-integer/description/)
+
+`This is gem question --> includes concept of recursion,handling overflow,signed & unsigned`
+
+```
+class Solution {
+public:
+int sum=0;
+    bool recur(int n){
+        if(n==0)
+            return true;
+        int rem = n%10;
+        if ((sum > INT_MAX / 10) || (sum < INT_MIN / 10)) {
+            return false;  // Return false to indicate overflow
+        }
+        sum=sum*10+rem;
+       return recur(n/10);
+    }
+    int reverse(int x) {
+      int sign = (x<0)?-1:1;
+      bool ans = recur(abs(x));
+      return ans ? sign * sum : 0;
+    }
+};
+```
+
+### Check if palindrome or not using recursion
+steps:
+draw tree and find recurrence relation
+find base case
+find the variables in recursion
+
+```
+#include <bits/stdc++.h>
+
+using namespace std;
+bool palindrome(string s,int i,int j){
+    if(i>j){
+        return true;
+    }
+    if(s[i]!=s[j]){
+        return false;
+    }
+    return palindrome(s,i+1,j-1);
+    
+}
+
+int main()
+{
+    string str = "abcclba";
+    int n= str.size();
+    cout<<palindrome(str,0,n-1);
+    return 0;
+}
+```
+
+### Count number of zeros in given number
+```
+int countZeros(int num){
+    //base
+    if(num==0){
+        return 1;
+    }
+    //extract last digit
+    if(num<10){
+        return (num==0)?1:0;
+    }
+    
+    //recursive case
+    int rem=num%10;
+    int cnt=0;
+    if(rem==0)
+        cnt++;
+    
+    return cnt+countZeros(num/10);
+}
+
+int main()
+{
+    int num = 120404032;
+    cout<<countZeros(num);
+    return 0;
+}
+```
+
+### Check for sorted array in ascending order
+steps:
+- Firstly find sub-problem by breaking it down
+- Draw recursion tree
+- identify base case
+
+```
+    [1,2,3,4]
+
+__Recursion tree__:
+    (arr,0)
+        |
+    (1<2) && (arr,1)
+        |
+    (2<3) && (arr,2)
+        |
+    (3<4) && (arr,3)
+```
+
+
+```
+#include <bits/stdc++.h>
+using namespace std;
+
+bool checkForSorted(int arr[],int idx,int len){
+    if(idx==len-1){
+        return true;
+    }
+    if(arr[idx]>arr[idx+1]){
+        return false;
+    }
+    return (arr[idx]<arr[idx+1]) && checkForSorted(arr,idx+1,len);
+    
+}
+int main()
+{
+    
+    int arr[]={1,2,3,8,5,6,7};
+    int len = sizeof(arr)/sizeof(arr[0]);
+    cout<<checkForSorted(arr,0,len);
+    return 0;
+}
+```
+### Linear search in array using recursion
+
+```
+
+```
+[1,2,8,5] target - 8
+__Recursion tree__:
+
+(arr,0)
+    |
+  (1=8) || (arr,1)
+    |
+   (2=8) || (arr,2)
+    |
+   (8=8) || (arr,3)
+
+from here return true
+
+
+```
+#include <bits/stdc++.h>
+using namespace std;
+
+bool linearSearch(int arr[],int len,int target,int idx){
+    //base case
+    if(idx==len-1){
+        return false;
+    }
+    
+    if(arr[idx]==target){
+        return true;
+    }
+    //recursive case
+    return (arr[idx]==target)||linearSearch(arr,len,target,idx+1);
+    
+    
+}
+int main()
+{
+    
+    int arr[]={1,2,3,8,5,6,7};
+    int target = 8;
+    int len = sizeof(arr)/sizeof(arr[0]);
+    cout<<linearSearch(arr,len,target,0);
+    return 0;
+}
+```
