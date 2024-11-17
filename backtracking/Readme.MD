@@ -106,3 +106,7 @@ Total n length and har index pe you have two options to explore , this is 2^n ti
 3.undo
 
 
+Types of question:
+1. subset generation
+2. permutation generation
+3. Maze (matrix)
