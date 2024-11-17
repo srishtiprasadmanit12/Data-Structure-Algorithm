@@ -21,6 +21,7 @@ public:
             return;
         }
 
+// Basic Approach - start with a number and then find permutation of rest digits 
         for(int i=0;i<nums.size();i++){
             //if 0th postion of array is 0, then
             if(!freq[i]){
@@ -43,3 +44,18 @@ public:
 
     }
 };
+/*
+                RECURSIVE TREE
+
+     ---------------1,2,3]-------------
+    /               |                  |          
+  [1]               [2]                [3]           ==>(start with these digits)
+  /   \           /    \               /  \
+[1,2]  [1,3]    [2,1]  [2,3]        [3,1]  [3,2]
+|       |          |      |            |      |
+[1,2,3] [1,3,2]  [2,1,3]  [2,3,1]   [3,1,2]  [3,2,1]
+
+
+
+
+*/
