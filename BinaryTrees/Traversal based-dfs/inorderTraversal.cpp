@@ -27,7 +27,7 @@ void itrInorder(TreeNode*root,vector<int>&inorder){
         inorder.push_back(root->val);
         root = root->right;
     }
-    returm inorder;
+    return inorder;
 }
 /*
         1
